@@ -23,7 +23,7 @@ pipeline{
         }
         stage('Despliegue'){
             steps{
-                sh 'docker run -d -p 3001:3000 -name demo-app-node-container demo-app-node'
+                sh 'docker run -d -p 3001:3000 --name demo-app-node-container demo-app-node'
                 echo 'Aplicación de node correndo a traves de localhost:3001 '
             }
         }
